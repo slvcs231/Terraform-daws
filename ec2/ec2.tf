@@ -1,15 +1,15 @@
 resource "aws_instance" "terraform" {
     ami = "ami-0220d79f3f480ecf5"
     instance_type = "t3.micro"
-    vpc_security_group_ids = [aws_security_group.allow_all.id]
+    vpc_security_group_ids = [aws_security_group.allow_all_d.id]
     tags = {
         Name = "terraform"
         Terraform = "True"
     }
 }
 
-resource "aws_security_group" "allow_all" {
-  name = "allow_all"
+resource "aws_security_group" "allow_all_d" {
+  name = "allow-all"
 
   egress {
     from_port   = 0
