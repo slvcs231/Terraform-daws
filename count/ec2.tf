@@ -11,7 +11,7 @@ resource "aws_instance" "terraform_count" {
 }
 
 resource "aws_security_group" "allow_all_count" {
-  name = "allow_all"
+  name = "allow-all-count"
 
   egress {
     from_port   = 0
