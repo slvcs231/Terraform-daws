@@ -6,7 +6,7 @@ resource "aws_instance" "terraform_count" {
   vpc_security_group_ids = [aws_security_group.allow_all_count.id]
 
   tags = {
-    Name = "var.instances [count.index]"
+    Name = var.instances[count.index]
     Terraform = "True"
   }
 }
