@@ -2,7 +2,7 @@ resource "aws_instance" "terraform_count" {
   ami = "ami-0220d79f3f480ecf5"
   count = 3
   instance_type = "t3.micro"
-  vpc_security_group_ids = [aws.aws_security_group.allow_all_count.id]
+  vpc_security_group_ids = [aws_security_group.allow_all_count.id]
 
   tags = {
     Name = "terraform_count"
