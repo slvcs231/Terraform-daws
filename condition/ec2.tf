@@ -10,7 +10,7 @@ resource "aws_instance" "Terraform-1" {
 }
 
 resource "aws_security_group" "allow_all_cond" {
-    name = "allow-all-cond"
+    name = "allow_all_cond"
 
     egress {
         from_port = 0
